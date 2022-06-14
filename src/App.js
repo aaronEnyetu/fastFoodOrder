@@ -17,6 +17,7 @@ function App() {
   const [pizzaId, setPizza] = useState(1);
   const [saladId, setSalad] = useState(1);
   const [orderName, setOrderName] = useState('To go');
+  const [instructions, setInstructions] = useState(['No cheese']);
   return (
     <div className="App">
       <OrderImages drinkId={drinkId} desertId={desertId} pizzaId={pizzaId} saladId={saladId} />
@@ -31,6 +32,10 @@ function App() {
           <PizzaDropdown setPizza={setPizza} />
           <SaladDropdown setSalad={setSalad} />
         </section>
+
+        <InstructionForm setInstructions={setInstructions} instructions={instructions} />
+        <InstructionList instructions={instructions} />
+
       </div>
     </div>
   );
