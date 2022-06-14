@@ -6,25 +6,32 @@ import DesertDropdown from './DesertDropdown';
 import PizzaDropdown from './PizzaDropdown';
 import SaladDropdown from './SaladDropdown';
 import InstructionList from './InstructionList';
-import 
+import InstructionForm from './InstructionForm';
+import OrderName from './OrderName';
+import OrderImages from './OrderImages';
 
 function App() {
+
+  const [drinkId, setDrink] = useState(1);
+  const [desertId, setDesert] = useState(1);
+  const [pizzaId, setPizza] = useState(1);
+  const [saladId, setSalad] = useState(1);
+  const [orderName, setOrderName] = useState();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learning React
-        </a>
-      </header>
+      <OrderImages drinkId={drinkId} desertId={desertId} pizzaId={pizzaId} saladId={saladId} />
+      <h1>
+        Here is your Order {orderName}
+      </h1>
+      <div className="bottom">
+        <OrderName setOrderName={setOrderName} />
+        <section className='dropdowns'>
+          <DrinkDropdown setDrink={setDrink} />
+          <DesertDropdown setDesert={setDesert} />
+          <PizzaDropdown setPizza={setPizza} />
+          <SaladDropdown setSalad={setSalad} />
+        </section>
+      </div>
     </div>
   );
 }
