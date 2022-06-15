@@ -17,7 +17,7 @@ function App() {
   const [pizzaId, setPizza] = useState(1);
   const [saladId, setSalad] = useState(1);
   const [orderName, setOrderName] = useState();
-  const [instructions, setInstructions] = useState(['No cheese']);
+  const [instructions, setInstructions] = useState([]);
   return (
     <div className="App">
       <OrderImages drinkId={drinkId} desertId={desertId} pizzaId={pizzaId} saladId={saladId} />

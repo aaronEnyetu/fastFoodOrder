@@ -14,6 +14,7 @@ export default function InstructionForm({ setInstructions, instructions }) {
 
   return (
     <section>
+      Customer Instructions
       <form onSubmit={handleSubmit}>
         <input value={instructionInput} onChange={(e) => setInstructionInput(e.target.value) } />
         <button>Submit</button>
