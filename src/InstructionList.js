@@ -6,7 +6,7 @@ export default function InstructionList({ instructions }) {
   return (
     <section>
       <h2>Preparation Instructions</h2>
-      {instructions.map((instruction) => (<instruction key={instruction} instruction={instruction} />))}
+      {instructions.map((instruction) => (<Instruction key={instruction} instruction={instruction} />))}
     </section>
   );
 }

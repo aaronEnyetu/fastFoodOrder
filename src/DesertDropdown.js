@@ -6,9 +6,9 @@ export default function DesertDropdown({ setDesert }) {
     <div>
             Select Desert
       <select onChange={e => setDesert(e.target.value)}>
-        <option value="1">Chocolate cake</option>
-        <option value="2">Sundae</option>
-        <option value="3">Muse</option>
+        <option value="1">Chocolate chip cookie</option>
+        <option value="2">Mexican Sundae</option>
+        <option value="3">Carrot cake</option>
       </select>
     </div>
   );
